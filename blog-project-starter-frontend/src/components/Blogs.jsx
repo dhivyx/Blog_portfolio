@@ -40,7 +40,7 @@ function Blogs() {
         })
 
 
-        axios.get("http://localhost:5000/api/blogs")
+        axios.get("https://blog-portfolio-1-tl5r.onrender.com/api/blogs")
             .then((res) => {
                 console.log(res.data)
                 setBlogs(res.data)
@@ -56,10 +56,10 @@ function Blogs() {
 
     const handleLike = async (blog_id) => {
         try {
-            const response = await axios.patch(`http://localhost:5000/api/blogs/like/${blog_id}`);
+            const response = await axios.patch(`https://blog-portfolio-1-tl5r.onrender.com/api/blogs/like/${blog_id}`);
             // After successfully updating the likes count in the backend, fetch the updated list of blogs
             if (response.status === 200) {
-                axios.get("http://localhost:5000/api/blogs").then((res) => {
+                axios.get("https://blog-portfolio-1-tl5r.onrender.com/api/blogs").then((res) => {
                     console.log(res.data)
                     setBlogs(res.data)//it updates blog list again to show new like counts
                 }).catch(() => {
@@ -78,10 +78,10 @@ function Blogs() {
         const date = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         const likes = 0//sets initial like to 0
 
-        axios.post("http://localhost:5000/api/blogs", { newTitle, date, newContent, likes }).then((res) => {
+        axios.post("https://blog-portfolio-1-tl5r.onrender.com/api/blogs", { newTitle, date, newContent, likes }).then((res) => {
             console.log(res.data)//sends data to backend for storing
 
-            axios.get("http://localhost:5000/api/blogs").then((res) => {
+            axios.get("https://blog-portfolio-1-tl5r.onrender.com/api/blogs").then((res) => {
                 console.log(res.data)//retrives the above data(new blog)from backend to display in frontend
                 setBlogs(res.data)
             }).catch(() => {
