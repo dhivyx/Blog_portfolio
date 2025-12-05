@@ -30,6 +30,10 @@ const blogSchema = new mongoose.Schema({
 
 const Blog = mongoose.model('Blog', blogSchema);
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully!");
+});
+
 // Routes, here using get we fetch data from mongo db compass and pass to frontend
 app.get('/api/blogs', async (req, res) => {
   try {
