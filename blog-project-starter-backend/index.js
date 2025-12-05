@@ -16,6 +16,8 @@ app.use(express.json());
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URL).then(() => {
   console.log("Connection Successfull")
+}).catch((error)=>{
+  console.log(error)
 })
 
 // Define Schema
