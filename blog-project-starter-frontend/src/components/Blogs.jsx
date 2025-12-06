@@ -9,6 +9,7 @@ import { signOut } from 'firebase/auth';
 
 function Blogs() {
     const adminUID = process.env.REACT_APP_ADMIN_EMAIL_KEY;
+    console.log(process.env.REACT_APP_ADMIN_EMAIL_KEY)
 
 
     
