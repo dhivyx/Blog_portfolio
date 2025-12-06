@@ -24,6 +24,7 @@ function Blogs() {
             if (user) {
                 if (user.uid === adminUID) {
                     console.log("He/She is Admin")
+                    console.log(user.uid)
                     setAdmin(true)
                 }
                 else {
