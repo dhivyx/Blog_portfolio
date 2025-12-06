@@ -8,7 +8,14 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors("https://blog-portfolio-o6lk.vercel.app"))
+app.use(
+  cors({
+    origin: "https://blog-portfolio-o6lk.vercel.app",
+    methods: ["GET", "POST", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
 
 // Middleware
 app.use(express.json());
