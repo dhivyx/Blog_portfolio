@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors("https://blog-portfolio-o6lk.vercel.app/"))
+app.use(cors("https://blog-portfolio-o6lk.vercel.app"))
 
 // Middleware
 app.use(express.json());
