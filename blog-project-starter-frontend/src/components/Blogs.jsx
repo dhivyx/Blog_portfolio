@@ -3,14 +3,13 @@ import { useState } from 'react';
 import axios from "axios"
 import Footer from './common/Footer';
 import auth from '../config/firebase';
-import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 
 
 
 function Blogs() {
     const adminUID = process.env.REACT_APP_ADMIN_EMAIL_KEY;
-    const navigate = useNavigate()
+
 
     
 
