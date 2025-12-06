@@ -16,4 +16,4 @@ Backend: Node.js, Express, MongoDB (optional)
 
 ## Deployment
 Frontend: Vercel → https://blog-portfolio-o6lk.vercel.app/  
-Backend: Render → https://blog-portfolio-1-tl5r.onrender.com
+Backend: Render → https://blog-portfolio-1-bv3q.onrender.com
